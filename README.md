@@ -21,8 +21,8 @@ Você **não precisa** responder às questões abaixo dentro de seu projeto, mas
 
 - Observe o `App.js`, o que você consegue visualizar que já conhece? Lembra dos filtros e map aplicados durante a aula? 
 - Analize o componente `Header`, o componente `PokemonCard` e o `App.js`.
-  - No componente `Header` temos um array de tipos de pokemon que está sendo mapeado e retornando as opções dentro do dropdown de tipos.
-  - No componente `PokemonCard` todas as props já estão sendo passadas corretamente também. Os filtros por id e por nome também já funcionam. 
+- No componente `Header` temos um array de tipos de pokemon que está sendo mapeado e retornando as opções dentro do dropdown de tipos.
+- No componente `PokemonCard` todas as props já estão sendo passadas corretamente também. Os filtros por id e por nome também já funcionam. 
 
 ### - Agora vamos dar uma breve explicação sobre a pasta /utils no projeto: 
 
@@ -33,7 +33,7 @@ Dentro dessa pasta você encontrará 2 arquivos, cada um com uma função. O obj
 O seu trabalho hoje é bem simples: Você precisa aplicar `mais 2 filtros`. Primeiro, aplique o filtro de tipos de pokemon. Os requisitos são: 
 
 - Ao selecionar um tipo de pokemon no dropdown, todos os pokemons que tiverem aquele tipo precisam aparecer na tela, independente se o tipo for o primário ou o secundário. 
-  - Primário é o tipo que aparece primeiro, secundário é o tipo que aparece depois, caso exista.
+- Primário é o tipo que aparece primeiro, secundário é o tipo que aparece depois, caso exista.
 - Quando o input estiver vazio, todos os pokemons continuam aparecendo na tela.
 - No objeto que representa um pokemon, `type` é um array de tipos, use apenas o primeiro elemento do array como referência.
 

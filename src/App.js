@@ -4,6 +4,7 @@ import pokemons from "./pokemon/pokemon.json";
 import PokemonCard from "./components/PokemonCard/PokemonCard";
 import { getColors } from "./utils/ReturnCardColor";
 import Header from "./components/Header/Header.js";
+
 const GlobalStyle = createGlobalStyle`
   *{
     padding: 0;
@@ -21,6 +22,8 @@ const CardsContainer = styled.div`
 function App() {
   const [pesquisa, setPesquisa] = useState("");
   const [idFilter, setIdFilter] = useState("");
+  const [sort, setSort] = useState("");
+  const [type, setType] = useState("");
 
   return (
     <>
@@ -30,13 +33,20 @@ function App() {
         setIdFilter={setIdFilter}
         pesquisa={pesquisa}
         setPesquisa={setPesquisa}
+        sort={sort}
+        setSort={setSort}
+        type={type}
+        setType={setType}
       />
       <CardsContainer>
-        {pokemons.filter((pokemon) => {
-          return idFilter ? pokemon.id.includes(idFilter) : pokemon
-        })
+        {pokemons
           .filter((pokemon) => {
-            return pokemon.name.english.toLowerCase().includes(pesquisa.toLowerCase());
+            return idFilter ? pokemon.id.includes(idFilter) : pokemon;
+          })
+          .filter((pokemon) => {
+            return pokemon.name.english
+              .toLowerCase()
+              .includes(pesquisa.toLowerCase());
           })
           .map((pokemon) => {
             return (
